@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Price Prediction</h1>
+        <form method="POST" action="/predict">
+            <!-- Company Dropdown -->
+            <label for="company">Company:</label>
+            <select id="company" name="company" required>
+                {% for company in Company %}
+                    <option value="{{ company }}">{{ company }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Car Name Dropdown -->
+            <label for="name">Car Name:</label>
+            <select id="name" name="name" required>
+                {% for name in Car_Name %}
+                    <option value="{{ name }}">{{ name }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Year Input -->
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                {% for year in Year %}
+                    <option value="{{ year }}">{{ year }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Kilometers Driven Input -->
+            <label for="kms_driven">Kilometers Driven:</label>
+            <input type="number" id="kms_driven" name="kms_driven" placeholder="Enter kilometers driven" required>
+
+            <!-- Fuel Type Dropdown -->
+            <label for="fuel_type">Fuel Type:</label>
+            <select id="fuel_type" name="fuel_type" required>
+                {% for fuel in Fuel_Type %}
+                    <option value="{{ fuel }}">{{ fuel }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Predict Price</button>
+        </form>
+        <!-- Display the predicted price if available -->
+        {% if predicted_price %}
+            <h2>Predicted Price: {{ predicted_price }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
